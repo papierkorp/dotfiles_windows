@@ -1,0 +1,39 @@
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  eol = lf
+
+#---------------------------------------------------------------
+#---------------------- Windows - gitbash ----------------------
+#---------------------------------------------------------------
+
+[includeIf "gitdir:C:/develop/"] #inkludiert alle .git projekete in dem Ordner
+    path = C:/Users/Markus/.gitconfig_privat
+ 
+[includeIf "gitdir:C:/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/"] #inkludiert alle .git projekete in dem Ordner
+    path = C:/Users/Markus/.gitconfig_privat
+
+[includeIf "gitdir:C:/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/"] #inkludiert alle .git projekete in dem Ordner
+    path = C:/Users/Markus/.gitconfig_privat
+
+[includeIf "gitdir:C:/develop/sirconic/"]
+    path = C:/Users/Markus/.gitconfig_work
+ 
+[includeIf "gitdir:C:/Users/Markus/Documents/Godot/"]
+    path = C:/Users/Markus/.gitconfig_privat
+
+
+
+[includeIf "gitdir:%(prefix)//home/"]
+	path = ~/.gitconfig_privat
+
+[includeIf "gitdir:%(prefix)//mnt/c/develop/"]
+	path = ~/.gitconfig_privat
+#---------------------------------------------------------------
+#-------------------------- Debugging --------------------------
+#---------------------------------------------------------------
+ 
+#git config -l --show-scope --show-origin
+#git config user.email
+#~/.gitconfig
+#git remote set-url origin git@<repository.domain.com>:<username>/<repo_name>.git
