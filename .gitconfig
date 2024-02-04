@@ -28,6 +28,9 @@
 	path = ~/.gitconfig_privat
 
 [includeIf "gitdir:%(prefix)//mnt/c/develop/"]
+    path = ~/.gitconfig_privat
+
+[includeIf "gitdir:%(prefix)//mnt/c/Users/Markus/"]
 	path = ~/.gitconfig_privat
 #---------------------------------------------------------------
 #-------------------------- Debugging --------------------------
