@@ -1,0 +1,18 @@
+[user]
+    email = ms@sirconic-group.de
+    name = Markus Schiller
+#[credential "https://lab01-git.sirconic-k8s.de"]
+#	provider = generic
+#[credential "https://lab01-git.sirconic-k8s.de/leasone/*"]
+#    helper = wincred
+#    username = admin
+#    useHttpPath = true
+
+#[core]
+#    sshCommand = "ssh -i ~/.ssh/id_rsa_work"
+
+[url "worklab:"]
+    insteadOf = ssh://git@lab01-git.sirconic-k8s.de:12222
+    #default link: ssh://git@lab01-git.sirconic-k8s.de:12222/testprojekt/leasone.git .
+    #wird stattdessen verwendet: worklab:testprojekt/leasone.git .
+    #benutzt dazu die Angaben aus: ~.ssh/config Host worklab

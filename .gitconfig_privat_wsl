@@ -1,9 +1,0 @@
-[user]
-    email = m.schiller@ymail.com
-    name = Markus Schiller
- 
-[github]
-    user = papierkorp 
- 
-[core]
-    sshCommand = "ssh -i ~/.ssh/id_rsa_privat"

@@ -1,0 +1,4 @@
+k=kubectl $*
+ls=dir /B $1 
+hosts=notepad C:\Windows\system32\drivers\etc\hosts
+gitalias=notepad C:\Program Files\Git\etc\profile.d\aliases.sh

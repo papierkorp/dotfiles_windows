@@ -1,0 +1,9 @@
+[user]
+    email = ms@sirconic-group.de
+    name = Markus Schiller
+[github]
+    user = ms@sirconic-group.de
+#[core]
+#    sshCommand = "ssh -i ~/.ssh/id_rsa_workgithub"
+[url "workgithub:"]
+	insteadOf = git@github.com:
