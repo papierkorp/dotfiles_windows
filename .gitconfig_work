@@ -7,10 +7,10 @@
     helper = wincred
     username = ms
     useHttpPath = true
-[url "work:"]
-   insteadOf = ssh://git@git.sirconic-group.de:12222
+# [url "work:"]
+#   insteadOf = ssh://git@git.sirconic-group.de:12222
     #default link: ssh://git@lab01-git.sirconic-k8s.de:12222/testprojekt/leasone.git .
     #wird stattdessen verwendet: worklab:testprojekt/leasone.git .
     #benutzt dazu die Angaben aus: ~.ssh/config Host worklab
-# [core]
-#     sshCommand = "ssh -i C:/Users/Markus/.ssh/id_rsa_work"
+[core]
+    sshCommand = "ssh -i C:/Users/Markus/.ssh/id_rsa_work -p 12222"

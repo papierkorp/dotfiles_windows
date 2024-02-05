@@ -11,7 +11,7 @@ if [[ $system_info == *"MINGW64"* ]]; then
   do
     echo "Pushing Private - $repo..."
     cd "C:/develop/privat/$repo"
-    git add .
+    git add -u
     git commit -m "pushed with daily script"
     git push
     echo -e "Push of $repo successfull. \n \n"
@@ -19,7 +19,7 @@ if [[ $system_info == *"MINGW64"* ]]; then
 
   echo "Pushing todo\`s.."
   cd "C:/develop/sirconic/todo"
-  git add .
+  git add -u
   git commit -m "pushed with daily script"
   git push
   echo "Push of todo\`s successfull."
@@ -27,7 +27,7 @@ if [[ $system_info == *"MINGW64"* ]]; then
 
   echo "Pushing SublimeText"
   cd "C:/Users/Markus/AppData/Roaming/Sublime Text/Packages/User"
-  git add .
+  git add -u
   git commit -m "pushed with daily script"
   git push
   echo "Push of Sublime Text successfull."
@@ -39,7 +39,7 @@ elif [[ $system_info == *"Linux"* ]]; then
   do
     echo "Pushing $repo..."
     cd "/mnt/c/develop/privat/$repo"
-    git add .
+    git add -u
     git commit -m "pushed with daily script"
     git push
     echo -e "Push of $repo successfull. \n \n"
@@ -47,7 +47,7 @@ elif [[ $system_info == *"Linux"* ]]; then
 
   echo "Pushing todo\`s.."
   cd "/mnt/c/develop/sirconic/todo"
-  git add .
+  git add -u
   git commit -m "pushed with daily script"
   git push
   echo "Push of todo\`s successfull."
@@ -55,11 +55,19 @@ elif [[ $system_info == *"Linux"* ]]; then
 
   echo "Pushing SublimeText"
   cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text/Packages/User"
-  git add .
+  git add -u
   git commit -m "pushed with daily script"
   git push
   echo "Push of Sublime Text successfull."
 
+  echo "Pushing Dotfiles"
+  dotf add -u
+  dotf commit -m "pushed with daily script"
+  dotf push
+
+  dotfw add -u
+  dotfw commit -m "pushed with daily script"
+  dotfw push
 else
   echo "Unknown system."
 fi

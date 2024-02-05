@@ -71,6 +71,9 @@ elif [[ $system_info == *"Linux"* ]]; then
   echo "Pulling todo\`s.."
   cd "/mnt/c/develop/sirconic/todo"
   git pull
+
+  dotf pull #pull dotfiles
+  dotfw pull #pull windows dotfiles
 else
   echo "Unknown system."
 fi

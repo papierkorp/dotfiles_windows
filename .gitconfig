@@ -9,29 +9,48 @@
 
 [includeIf "gitdir:C:/develop/"] #inkludiert alle .git projekete in dem Ordner
     path = C:/Users/Markus/.gitconfig_privat
- 
-[includeIf "gitdir:C:/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/"] #inkludiert alle .git projekete in dem Ordner
-    path = C:/Users/Markus/.gitconfig_privat
+
+[includeIf "gitdir:C:/develop/space/"] #inkludiert alle .git projekete in dem Ordner
+    path = C:/Users/Markus/.gitconfig_work
+
+[includeIf "gitdir:C:/develop/labspace/"] #inkludiert alle .git projekete in dem Ordner
+    path = C:/Users/Markus/.gitconfig_work
 
 [includeIf "gitdir:C:/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/"] #inkludiert alle .git projekete in dem Ordner
     path = C:/Users/Markus/.gitconfig_privat
 
 [includeIf "gitdir:C:/develop/sirconic/"]
-    path = C:/Users/Markus/.gitconfig_work
+    path = C:/Users/Markus/.gitconfig_workgithub
  
 [includeIf "gitdir:C:/Users/Markus/Documents/Godot/"]
     path = C:/Users/Markus/.gitconfig_privat
 
 
-
-[includeIf "gitdir:%(prefix)//home/"]
-	path = ~/.gitconfig_privat
+#---------------------------------------------------------------
+#---------------------- WSL - gitbash ----------------------
+#---------------------------------------------------------------
 
 [includeIf "gitdir:%(prefix)//mnt/c/develop/"]
     path = ~/.gitconfig_privat
 
-[includeIf "gitdir:%(prefix)//mnt/c/Users/Markus/"]
+[includeIf "gitdir:%(prefix)//home/"]
 	path = ~/.gitconfig_privat
+
+[includeIf "gitdir:%(prefix)//mnt/c/develop/space/"]
+    path = ~/.gitconfig_work
+
+[includeIf "gitdir:%(prefix)//mnt/c/develop/labspace/"]
+    path = ~/.gitconfig_work
+
+[includeIf "gitdir:%(prefix)//mnt/c/develop/sirconic/"]
+    path = ~/.gitconfig_workgithub
+
+[includeIf "gitdir:%(prefix)//mnt/c/develop/privat/"]
+    path = ~/.gitconfig_privat
+
+[includeIf "gitdir:%(prefix)//mnt/c/Users/Markus/"]
+    path = ~/.gitconfig_privat
+
 #---------------------------------------------------------------
 #-------------------------- Debugging --------------------------
 #---------------------------------------------------------------
