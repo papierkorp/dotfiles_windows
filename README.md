@@ -9,21 +9,17 @@ to be used together with a dotfiles Repo for my WSL
 ```bash
 mkdir /mnt/c/Users/Markus/.dotfiles
 git init --bare /mnt/c/Users/Markus/.dotfiles
-alias dotfiles_windows='/usr/bin/git --git-dir=/mnt/c/Users/Markus/.dotfiles --work-tree=/mnt/c/Users/Markus'
-dotfiles_windows config --local status.showUntrackedFiles no
-dotfiles_windows remote add origin git@github.com:papierkorp/dotfiles_windows.git
-dotfiles_windows add ~/.bash_aliases
-dotfiles_windows push
+alias dotfw='/usr/bin/git --git-dir=/mnt/c/Users/Markus/.dotfiles --work-tree=/mnt/c/Users/Markus'
+dotfw config --local status.showUntrackedFiles no
+dotfw remote add origin git@github.com:papierkorp/dotfiles_windows.git
+dotfw add ~/.bash_aliases
+dotfw push
 ```
 
 # Usage
 
-!!to be tested!!
-
 ```bash
-git clone --separate-git-dir=$HOME/.dotfiles git@github.com:papierkorp/dotfiles_windows.git tmpdotfiles
-rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
+git clone --separate-git-dir=/mnt/c/Users/Markus/.dotfiles git@github.com:papierkorp/dotfiles_windows.git tmpdotfiles
+rsync --recursive --verbose --exclude '.git' tmpdotfiles/ /mnt/c/Users/Markus/
 rm -r tmpdotfiles
-
-git clone --separate-git-dir=$HOME/.dotfiles git@github.com:papierkorp/dotfiles_windows.git ~
 ```
