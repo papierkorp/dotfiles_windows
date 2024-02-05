@@ -19,7 +19,9 @@ dotfw push
 # Usage
 
 ```bash
+touch .gitconfig .gitconfig_privat
 git clone --separate-git-dir=/mnt/c/Users/Markus/.dotfiles git@github.com:papierkorp/dotfiles_windows.git tmpdotfiles
+rm .gitconfig*
 rsync --recursive --verbose --exclude '.git' tmpdotfiles/ /mnt/c/Users/Markus/
 rm -r tmpdotfiles
 ```
