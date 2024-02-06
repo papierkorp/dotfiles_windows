@@ -21,7 +21,7 @@ config.mouse_bindings = {
 		end),
 	},
 	{
-		event = { Down = { streak = 2, button = "Left" } },
+		event = { Down = { streak = 1, button = "Middle" } },
 		mods = "NONE",
 		action = wezterm.action_callback(function(window, pane)
 			local has_selection = window:get_selection_text_for_pane(pane) ~= ""

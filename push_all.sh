@@ -73,6 +73,4 @@ else
     echo "Unknown system."
 fi
 
-
-
-
+pause
