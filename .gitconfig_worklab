@@ -9,7 +9,7 @@
 #    useHttpPath = true
 
 [core]
-   sshCommand = "ssh -i ~/.ssh/id_rsa_work -p 12222"
+   sshCommand = "ssh -i ~/.ssh/id_rsa_work -p 12222 -o StrictHostKeyChecking=no"
 
 # [url "worklab:"]
     # insteadOf = ssh://git@lab01-git.sirconic-k8s.de:12222

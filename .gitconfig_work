@@ -13,4 +13,4 @@
     #wird stattdessen verwendet: worklab:testprojekt/leasone.git .
     #benutzt dazu die Angaben aus: ~.ssh/config Host worklab
 [core]
-    sshCommand = "ssh -i C:/Users/Markus/.ssh/id_rsa_work -p 12222"
+    sshCommand = "ssh -i C:/Users/Markus/.ssh/id_rsa_work -p 12222 -o StrictHostKeyChecking=no"

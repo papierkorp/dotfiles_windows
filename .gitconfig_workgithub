@@ -4,6 +4,6 @@
 [github]
     user = ms@sirconic-group.de
 [core]
-    sshCommand = "ssh -i ~/.ssh/id_rsa_workgithub"
+    sshCommand = "ssh -i ~/.ssh/id_rsa_workgithub -o StrictHostKeyChecking=no"
 #[url "workgithub:"]
 #	insteadOf = git@github.com:

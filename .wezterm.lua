@@ -11,6 +11,7 @@ config.default_domain = "WSL:Ubuntu-22.04"
 -- config.hide_tab_bar_if_only_one_tab = true
 config.enable_tab_bar = false
 config.window_close_confirmation = "NeverPrompt"
+config.audible_bell = "Disabled"
 
 config.mouse_bindings = {
 	{
