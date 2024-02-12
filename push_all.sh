@@ -17,6 +17,16 @@ if [[ $system_info == *"MINGW64"* ]]; then
         echo -e "Push of $repo successfull. \n \n"
     done
 
+    for repo in "${repos_privat[@]}"
+    do
+        echo "Pushing Private - $repo..."
+        cd "C:/develop/$repo" || return
+        git add -u
+        git commit -m "pushed with daily script"
+        git push
+        echo -e "Push of $repo successfull. \n \n"
+    done
+
     echo "Pushing todo\`s.."
     cd "C:/develop/sirconic/todo" || return
     git add -u
@@ -39,6 +49,16 @@ elif [[ $system_info == *"Linux"* ]]; then
     do
         echo "Pushing $repo..."
         cd "/mnt/c/develop/privat/$repo" || return
+        git add -u
+        git commit -m "pushed with daily script"
+        git push
+        echo -e "Push of $repo successfull. \n \n"
+    done
+
+    for repo in "${repos_privat[@]}"
+    do
+        echo "Pushing $repo..."
+        cd "/mnt/c/develop/$repo" || return
         git add -u
         git commit -m "pushed with daily script"
         git push

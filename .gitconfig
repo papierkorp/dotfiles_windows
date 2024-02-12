@@ -12,13 +12,13 @@
 [includeIf "gitdir:C:/develop/"] #inkludiert alle .git projekete in dem Ordner
     path = C:/Users/Markus/.gitconfig_privat
 
-[includeIf "gitdir:C:/develop/space/"] #inkludiert alle .git projekete in dem Ordner
+[includeIf "gitdir:C:/develop/space/"]
     path = C:/Users/Markus/.gitconfig_work
 
-[includeIf "gitdir:C:/develop/labspace/"] #inkludiert alle .git projekete in dem Ordner
+[includeIf "gitdir:C:/develop/labspace/"]
     path = C:/Users/Markus/.gitconfig_work
 
-[includeIf "gitdir:C:/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/"] #inkludiert alle .git projekete in dem Ordner
+[includeIf "gitdir:C:/Users/Markus/AppData/Roaming/Sublime Text/Packages/"]
     path = C:/Users/Markus/.gitconfig_privat
 
 [includeIf "gitdir:C:/develop/sirconic/"]

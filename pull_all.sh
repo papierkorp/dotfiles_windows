@@ -33,6 +33,13 @@ if [[ $system_info == *"MINGW64"* ]]; then
         git pull
     done
 
+    for repo in "${repos_privat[@]}"
+    do
+        echo "Pulling Private - $repo..."
+        cd "C:/develop/$repo" || return
+        git pull
+    done
+
     echo "Pulling SublimeText"
     cd "C:/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
     git pull
@@ -62,6 +69,13 @@ elif [[ $system_info == *"Linux"* ]]; then
     do
         echo "Pulling $repo..."
         cd "/mnt/c/develop/privat/$repo" || return
+        git pull
+    done
+
+    for repo in "${repos_privat[@]}"
+    do
+        echo "Pulling $repo..."
+        cd "/mnt/c/develop/$repo" || return
         git pull
     done
 
