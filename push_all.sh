@@ -92,7 +92,7 @@ elif [[ $system_info == *"Linux"* ]]; then
     /usr/bin/git --git-dir="/mnt/c/Users/Markus/.dotfiles" --work-tree="/mnt/c/Users/Markus" commit -m "pushed with daily script"
     /usr/bin/git --git-dir="/mnt/c/Users/Markus/.dotfiles" --work-tree="/mnt/c/Users/Markus" push
 
-    echo "Push of windows dotfile successfull."
+    echo "Push of windows dotfiles successfull."
 else
     echo "Unknown system."
 fi
