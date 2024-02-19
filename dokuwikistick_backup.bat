@@ -1,7 +1,7 @@
 @echo off
-set sourceFolder=D:\DokuWikiStick\dokuwiki\data\pages
-set destinationFolder=C:\Users\Markus\Documents\DokuWikiStick\dokuwiki\data\pages
-set folderToDelete=C:\Users\Markus\Documents\DokuWikiStick\dokuwiki\data\pages\wichtig\p
+set sourceFolder=D:/nonSchule/DokuWikiStick/dokuwiki/data/pages
+set destinationFolder=C:/Users/Markus/Documents/DokuWikiStick/dokuwiki/data/pages
+set folderToDelete=C:/Users/Markus/Documents/DokuWikiStick/dokuwiki/data/pages/wichtig/p
 
 
 echo Copying files from %sourceFolder% to %destinationFolder%...
