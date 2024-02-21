@@ -40,6 +40,11 @@ if [[ $system_info == *"MINGW64"* ]]; then
     git add -u
     git commit -m "pushed with daily script"
     git push
+
+    cd "C:/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User" || return
+    git add -u
+    git commit -m "pushed with daily script"
+    git push
     echo "Push of Sublime Text successfull."
 
 elif [[ $system_info == *"Linux"* ]]; then
@@ -75,6 +80,11 @@ elif [[ $system_info == *"Linux"* ]]; then
 
     echo "Pushing SublimeText"
     cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
+    git add -u
+    git commit -m "pushed with daily script"
+    git push
+
+    cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User" || return
     git add -u
     git commit -m "pushed with daily script"
     git push
