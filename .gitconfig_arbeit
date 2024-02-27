@@ -15,4 +15,4 @@
     useHttpPath = true
  
 [core]
-    sshCommand = "ssh -i C:/Users/Markus/.ssh/id_rsa_work"
+    sshCommand = "ssh -i C:/Users/Markus/.ssh/id_rsa_work -i ~/.ssh/id_rsa_work -o StrictHostKeyChecking=no"

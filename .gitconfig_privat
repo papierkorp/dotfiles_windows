@@ -6,4 +6,4 @@
     user = papierkorp 
  
 [core]
-    sshCommand = "ssh -i ~/.ssh/id_rsa_privat -o StrictHostKeyChecking=no"
+    sshCommand = "ssh -i C:/Users/Markus/.ssh/id_rsa_privat -i ~/.ssh/id_rsa_privat -o StrictHostKeyChecking=no"
