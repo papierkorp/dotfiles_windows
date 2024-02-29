@@ -40,6 +40,13 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.CloseCurrentTab({ confirm = false }),
 	},
+	{
+		key = "z",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SpawnTab {
+            DomainName = 'WSL:docker-desktop',
+        }
+	},
 }
 
 config.background = {
