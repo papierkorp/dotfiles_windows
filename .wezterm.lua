@@ -38,15 +38,25 @@ config.keys = {
 	{
 		key = "w",
 		mods = "CTRL|SHIFT",
-		action = wezterm.action.CloseCurrentTab({ confirm = false }),
+		action = act.CloseCurrentTab({ confirm = false }),
 	},
 	{
 		key = "z",
 		mods = "CTRL|SHIFT",
-		action = wezterm.action.SpawnTab {
+		action = act.SpawnTab {
             DomainName = 'WSL:docker-desktop',
         }
 	},
+    {
+        key = "y",
+        mods = "CTRL",
+        action = act.ActivateTabRelativeNoWrap(-1),
+    },
+    {
+        key = "y",
+        mods = "CTRL|SHIFT",
+        action = act.ActivateTabRelativeNoWrap(1),
+    }
 }
 
 config.background = {
