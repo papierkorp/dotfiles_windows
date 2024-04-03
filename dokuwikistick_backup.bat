@@ -9,8 +9,15 @@ xcopy /E /Y /I "%sourceFolder%" "%destinationFolder%"
 echo Copy completed.
 
 
-echo Deleting folder %folderToDelete%...
-rd /S /Q "%folderToDelete%"
-echo Delete completed.
+for /f "tokens=2 delims=: " %%a in ('hostname') do set hostname=%%a
+
+echo %hostname%
+if "%hostname%" NEQ "papierkorp" (
+    echo Deleting folder %folderToDelete%...
+    rd /S /Q "%folderToDelete%"
+    echo Delete completed.
+) else (
+    echo Skipping deletion as hostname is papierkorp.
+)
 
 pause
