@@ -6,6 +6,7 @@ repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow")
 # Check if the system_info contains "MINGW64" to identify Windows
 if [[ $system_info == *"MINGW64"* ]]; then
     echo "executing gitbash script.."
+    printf "===============\n\n\n\n\n==============="
 
     for repo in "${repos_privat[@]}"
     do
