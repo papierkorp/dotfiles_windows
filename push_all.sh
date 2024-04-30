@@ -1,7 +1,7 @@
 #!/bin/bash
 
 system_info=$(uname -a)
-repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow" "godot/beastmaster")
+repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow")
 
 # Check if the system_info contains "MINGW64" to identify Windows
 if [[ $system_info == *"MINGW64"* ]]; then
@@ -41,12 +41,6 @@ if [[ $system_info == *"MINGW64"* ]]; then
     git commit -m "pushed with daily script"
     git push
 
-    cd "C:/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User" || return
-    git add -u
-    git commit -m "pushed with daily script"
-    git push
-    echo "Push of Sublime Text successfull."
-
 elif [[ $system_info == *"Linux"* ]]; then
     echo "executing wsl script.."
 
@@ -83,13 +77,6 @@ elif [[ $system_info == *"Linux"* ]]; then
     git add -u
     git commit -m "pushed with daily script"
     git push
-
-    cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User" || return
-    git add -u
-    git commit -m "pushed with daily script"
-    git push
-    echo "Push of Sublime Text successfull."
-
 
     echo "Pushing Dotfiles"
     /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" add -u
