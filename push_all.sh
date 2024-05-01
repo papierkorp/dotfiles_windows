@@ -3,43 +3,62 @@
 system_info=$(uname -a)
 repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow")
 
+hostname=$(hostname | tr '[:lower:]' '[:upper:]')
+hostname_to_check=$(echo "PAPIERKORP" | tr '[:lower:]' '[:upper:]')
+
+echo "hostname: $hostname"
+echo "hostname_to_check: $hostname_to_check"
+
+echo "System: $system_info"
+
+printf "===============\n\n\n\n\n==============="
+
 # Check if the system_info contains "MINGW64" to identify Windows
 if [[ $system_info == *"MINGW64"* ]]; then
     echo "executing gitbash script.."
     printf "===============\n\n\n\n\n==============="
 
-    for repo in "${repos_privat[@]}"
-    do
-        echo "Pushing Private - $repo..."
-        cd "C:/develop/privat/$repo" || return
+
+    if [[ $hostname  != $hostname_to_check ]]; then
+        for repo in "${repos_privat[@]}"
+        do
+            echo "Pushing Private - $repo..."
+            cd "C:/develop/privat/$repo" || return
+            git add -u
+            git commit -m "pushed with daily script"
+            git push
+            echo -e "Push of $repo successfull. \n \n"
+
+            printf "===============\n\n\n\n\n==============="
+        done
+
+
+        echo "Pushing todo\`s.."
+        cd "C:/develop/sirconic/todo" || return
         git add -u
         git commit -m "pushed with daily script"
         git push
-        echo -e "Push of $repo successfull. \n \n"
+        echo "Push of todo\`s successfull."
 
         printf "===============\n\n\n\n\n==============="
-    done
 
-    for repo in "${repos_privat[@]}"
-    do
-        echo "Pushing Private - $repo..."
-        cd "C:/develop/$repo" || return
-        git add -u
-        git commit -m "pushed with daily script"
-        git push
-        echo -e "Push of $repo successfull. \n \n"
+    fi
 
-        printf "===============\n\n\n\n\n==============="
-    done
+    if [[ $hostname  == $hostname_to_check ]]; then
 
-    echo "Pushing todo\`s.."
-    cd "C:/develop/sirconic/todo" || return
-    git add -u
-    git commit -m "pushed with daily script"
-    git push
-    echo "Push of todo\`s successfull."
+        for repo in "${repos_privat[@]}"
+        do
+            echo "Pushing Private - $repo..."
+            cd "C:/develop/$repo" || return
+            git add -u
+            git commit -m "pushed with daily script"
+            git push
+            echo -e "Push of $repo successfull. \n \n"
 
-    printf "===============\n\n\n\n\n==============="
+            printf "===============\n\n\n\n\n==============="
+        done
+    fi
+
 
     echo "Pushing SublimeText"
     cd "C:/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
@@ -50,63 +69,69 @@ if [[ $system_info == *"MINGW64"* ]]; then
     printf "===============\n\n\n\n\n==============="
 elif [[ $system_info == *"Linux"* ]]; then
     echo "executing wsl script.."
+    printf "===============\n\n\n\n\n==============="
 
-    for repo in "${repos_privat[@]}"
-    do
-        echo "Pushing $repo..."
-        cd "/mnt/c/develop/privat/$repo" || return
+    if [[ $hostname  != $hostname_to_check ]]; then
+        for repo in "${repos_privat[@]}"
+        do
+            echo "Pushing $repo..."
+            cd "/mnt/c/develop/privat/$repo" || return
+            git add -u
+            git commit -m "pushed with daily script"
+            git push
+            echo -e "Push of $repo successfull. \n \n"
+
+            printf "===============\n\n\n\n\n==============="
+        done
+
+
+        echo "Pushing todo\`s.."
+        cd "/mnt/c/develop/sirconic/todo" || return
         git add -u
         git commit -m "pushed with daily script"
         git push
-        echo -e "Push of $repo successfull. \n \n"
+        echo "Push of todo\`s successfull."
 
         printf "===============\n\n\n\n\n==============="
-    done
+    fi
 
-    for repo in "${repos_privat[@]}"
-    do
-        echo "Pushing $repo..."
-        cd "/mnt/c/develop/$repo" || return
+    if [[ $hostname  == $hostname_to_check ]]; then
+        for repo in "${repos_privat[@]}"
+        do
+            echo "Pushing $repo..."
+            cd "/mnt/c/develop/$repo" || return
+            git add -u
+            git commit -m "pushed with daily script"
+            git push
+            echo -e "Push of $repo successfull. \n \n"
+
+            printf "===============\n\n\n\n\n==============="
+        done
+
+        echo "Pushing SublimeText"
+        cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
         git add -u
         git commit -m "pushed with daily script"
         git push
-        echo -e "Push of $repo successfull. \n \n"
 
         printf "===============\n\n\n\n\n==============="
-    done
 
-    echo "Pushing todo\`s.."
-    cd "/mnt/c/develop/sirconic/todo" || return
-    git add -u
-    git commit -m "pushed with daily script"
-    git push
-    echo "Push of todo\`s successfull."
+        echo "Pushing Dotfiles"
+        /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" add -u
+        /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" commit -m "pushed with daily script"
+        /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" push
+        echo "Push of dotfiles successfull."
 
-    printf "===============\n\n\n\n\n==============="
+        printf "===============\n\n\n\n\n==============="
 
-    echo "Pushing SublimeText"
-    cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
-    git add -u
-    git commit -m "pushed with daily script"
-    git push
+        echo "Pushing Windows Dotfiles"
+        /usr/bin/git --git-dir="/mnt/c/Users/Markus/.dotfiles" --work-tree="/mnt/c/Users/Markus" add -u
+        /usr/bin/git --git-dir="/mnt/c/Users/Markus/.dotfiles" --work-tree="/mnt/c/Users/Markus" commit -m "pushed with daily script"
+        /usr/bin/git --git-dir="/mnt/c/Users/Markus/.dotfiles" --work-tree="/mnt/c/Users/Markus" push
+        echo "Push of windows dotfiles successfull."
 
-    printf "===============\n\n\n\n\n==============="
-
-    echo "Pushing Dotfiles"
-    /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" add -u
-    /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" commit -m "pushed with daily script"
-    /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" push
-    echo "Push of dotfiles successfull."
-
-    printf "===============\n\n\n\n\n==============="
-
-    echo "Pushing Windows Dotfiles"
-    /usr/bin/git --git-dir="/mnt/c/Users/Markus/.dotfiles" --work-tree="/mnt/c/Users/Markus" add -u
-    /usr/bin/git --git-dir="/mnt/c/Users/Markus/.dotfiles" --work-tree="/mnt/c/Users/Markus" commit -m "pushed with daily script"
-    /usr/bin/git --git-dir="/mnt/c/Users/Markus/.dotfiles" --work-tree="/mnt/c/Users/Markus" push
-    echo "Push of windows dotfiles successfull."
-
-    printf "===============\n\n\n\n\n==============="
+        printf "===============\n\n\n\n\n==============="
+    fi
 else
     echo "Unknown system."
 fi
