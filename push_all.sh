@@ -11,7 +11,7 @@ echo "hostname_to_check: $hostname_to_check"
 
 echo "System: $system_info"
 
-printf "===============\n\n\n\n\n==============="
+printf "===============\n\n\n\n\n"
 
 # Check if the system_info contains "MINGW64" to identify Windows
 if [[ $system_info == *"MINGW64"* ]]; then
