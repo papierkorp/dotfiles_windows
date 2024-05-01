@@ -10,8 +10,6 @@ echo "hostname: $hostname"
 echo "hostname_to_check: $hostname_to_check"
 
 echo "System: $system_info"
-
-printf "===============\n\n\n\n\n"
     
 if [[ $system_info == *"MINGW64"* ]]; then
     echo "executing gitbash script.."
