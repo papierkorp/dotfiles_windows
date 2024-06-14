@@ -15,6 +15,9 @@
 [includeIf "gitdir:C:/develop/space/"]
     path = C:/Users/Markus/.gitconfig_work
 
+[includeIf "gitdir:C:/develop/gitlab/"]
+    path = C:/Users/Markus/.gitconfig_work
+
 [includeIf "gitdir:C:/develop/labspace/"]
     path = C:/Users/Markus/.gitconfig_work
 
@@ -41,6 +44,9 @@
 [includeIf "gitdir:%(prefix)//mnt/c/develop/space/"]
     path = ~/.gitconfig_work
 
+[includeIf "gitdir:%(prefix)//mnt/c/develop/gitlab/"]
+    path = ~/.gitconfig_work
+
 [includeIf "gitdir:%(prefix)//mnt/c/develop/labspace/"]
     path = ~/.gitconfig_work
 
@@ -59,5 +65,6 @@
  
 #git config -l --show-scope --show-origin
 #git config user.email
+#git config core.sshcommand
 #~/.gitconfig
 #git remote set-url origin git@<repository.domain.com>:<username>/<repo_name>.git

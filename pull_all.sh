@@ -1,7 +1,7 @@
 #!/bin/bash
 
 repos_work=("infrastructure" "leasone" "wiki")
-repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow")
+repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow" "vikunja")
 system_info=$(uname -a)
 hostname=$(hostname | tr '[:lower:]' '[:upper:]')
 hostname_to_check=$(echo "PAPIERKORP" | tr '[:lower:]' '[:upper:]')
@@ -37,7 +37,7 @@ if [[ $system_info == *"MINGW64"* ]]; then
 
 
         echo "Pulling todo\`s.."
-        cd "C:/develop/sirconic/todo" || return
+        cd "C:/develop/todo" || return
         git pull
 
         printf "===============\n\n\n\n\n==============="
@@ -87,7 +87,7 @@ elif [[ $system_info == *"Linux"* ]]; then
         done
 
         echo "Pulling todo\`s.."
-        cd "/mnt/c/develop/sirconic/todo" || return
+        cd "/mnt/c/develop/todo" || return
         git pull
 
     printf "===============\n\n\n\n\n==============="
