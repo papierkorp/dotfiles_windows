@@ -68,3 +68,5 @@
 #git config core.sshcommand
 #~/.gitconfig
 #git remote set-url origin git@<repository.domain.com>:<username>/<repo_name>.git
+[credential "https://git.sirconic-group.de"]
+	provider = generic

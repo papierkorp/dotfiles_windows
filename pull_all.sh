@@ -20,7 +20,7 @@ if [[ $system_info == *"MINGW64"* ]]; then
         for repo in "${repos_work[@]}"
         do
             echo "Pulling Ops - $repo..."
-            cd "C:/develop/space/$repo" || return
+            cd "C:/develop/gitlab/$repo" || return
             git pull
 
             printf "===============\n\n\n\n\n==============="
@@ -71,7 +71,7 @@ elif [[ $system_info == *"Linux"* ]]; then
         for repo in "${repos_work[@]}"
         do
             echo "Pulling $repo..."
-            cd "/mnt/c/develop/space/$repo" || return
+            cd "/mnt/c/develop/gitlab/$repo" || return
             git pull
 
             printf "===============\n\n\n\n\n==============="
