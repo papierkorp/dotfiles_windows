@@ -18,6 +18,9 @@
 [includeIf "gitdir:C:/develop/gitlab/"]
     path = C:/Users/Markus/.gitconfig_work
 
+[includeIf "gitdir:C:/develop/lab-gitlab/"]
+    path = C:/Users/Markus/.gitconfig_work
+
 [includeIf "gitdir:C:/develop/labspace/"]
     path = C:/Users/Markus/.gitconfig_work
 
