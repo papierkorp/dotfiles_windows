@@ -1,7 +1,7 @@
 #!/bin/bash
 
 system_info=$(uname -a)
-repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow" "vikunja")
+repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow" "vikunja" "gowiki")
 
 hostname=$(hostname | tr '[:lower:]' '[:upper:]')
 hostname_to_check=$(echo "PAPIERKORP" | tr '[:lower:]' '[:upper:]')
@@ -128,6 +128,30 @@ elif [[ $system_info == *"Linux"* ]]; then
             echo -e "Push of $repo successfull. \n \n"
 
             printf "===============\n\n\n\n\n==============="
+
+        echo "Pushing SublimeText"
+        cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
+        git add -u
+        git commit -m "pushed with daily script"
+        git push
+
+        printf "===============\n\n\n\n\n==============="
+
+        echo "Pushing Dotfiles"
+        /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" add -u
+        /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" commit -m "pushed with daily script"
+        /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" push
+        echo "Push of dotfiles successfull."
+
+        printf "===============\n\n\n\n\n==============="
+
+        echo "Pushing Windows Dotfiles"
+        /usr/bin/git --git-dir="/mnt/c/Users/Markus/.dotfiles" --work-tree="/mnt/c/Users/Markus" add -u
+        /usr/bin/git --git-dir="/mnt/c/Users/Markus/.dotfiles" --work-tree="/mnt/c/Users/Markus" commit -m "pushed with daily script"
+        /usr/bin/git --git-dir="/mnt/c/Users/Markus/.dotfiles" --work-tree="/mnt/c/Users/Markus" push
+        echo "Push of windows dotfiles successfull."
+
+        printf "===============\n\n\n\n\n==============="
         done
     fi
 else
