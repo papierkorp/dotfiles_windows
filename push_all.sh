@@ -128,6 +128,7 @@ elif [[ $system_info == *"Linux"* ]]; then
             echo -e "Push of $repo successfull. \n \n"
 
             printf "===============\n\n\n\n\n==============="
+        done
 
         echo "Pushing SublimeText"
         cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
@@ -152,7 +153,6 @@ elif [[ $system_info == *"Linux"* ]]; then
         echo "Push of windows dotfiles successfull."
 
         printf "===============\n\n\n\n\n==============="
-        done
     fi
 else
     echo "Unknown system."
