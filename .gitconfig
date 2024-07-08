@@ -27,6 +27,9 @@
 [includeIf "gitdir:C:/Users/Markus/AppData/Roaming/Sublime Text/Packages/"]
     path = C:/Users/Markus/.gitconfig_privat
 
+[includeIf "gitdir:C:/develop/todo/"]
+    path = C:/Users/Markus/.gitconfig_workgithub
+
 [includeIf "gitdir:C:/develop/sirconic/"]
     path = C:/Users/Markus/.gitconfig_workgithub
  
@@ -54,6 +57,9 @@
     path = ~/.gitconfig_work
 
 [includeIf "gitdir:%(prefix)//mnt/c/develop/sirconic/"]
+    path = ~/.gitconfig_workgithub
+
+[includeIf "gitdir:%(prefix)//mnt/c/develop/todo/"]
     path = ~/.gitconfig_workgithub
 
 [includeIf "gitdir:%(prefix)//mnt/c/develop/privat/"]
