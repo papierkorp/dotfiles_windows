@@ -1,6 +1,6 @@
 [core]
   excludesfile = ~/.gitignore
-  autocrlf = input
+	autocrlf = false
   eol = lf
 
 [status]
