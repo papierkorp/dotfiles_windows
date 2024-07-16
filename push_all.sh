@@ -22,7 +22,7 @@ if [[ $system_info == *"MINGW64"* ]]; then
         do
             echo "Pushing Private - $repo..."
             cd "C:/develop/privat/$repo" || return
-            git add -u
+            git add --all
             git commit -m "pushed with daily script"
             git push
             echo -e "Push of $repo successfull. \n \n"
@@ -33,7 +33,7 @@ if [[ $system_info == *"MINGW64"* ]]; then
 
         echo "Pushing todo\`s.."
         cd "C:/develop/todo" || return
-        git add -u
+        git add --all
         git commit -m "pushed with daily script"
         git push
         echo "Push of todo\`s successfull."
@@ -48,7 +48,7 @@ if [[ $system_info == *"MINGW64"* ]]; then
         do
             echo "Pushing Private - $repo..."
             cd "C:/develop/$repo" || return
-            git add -u
+            git add --all
             git commit -m "pushed with daily script"
             git push
             echo -e "Push of $repo successfull. \n \n"
@@ -60,7 +60,7 @@ if [[ $system_info == *"MINGW64"* ]]; then
 
     echo "Pushing SublimeText"
     cd "C:/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
-    git add -u
+    git add --all
     git commit -m "pushed with daily script"
     git push
 
@@ -74,7 +74,7 @@ elif [[ $system_info == *"Linux"* ]]; then
         do
             echo "Pushing $repo..."
             cd "/mnt/c/develop/privat/$repo" || return
-            git add -u
+            git add --all
             git commit -m "pushed with daily script"
             git push
             echo -e "Push of $repo successfull. \n \n"
@@ -84,7 +84,7 @@ elif [[ $system_info == *"Linux"* ]]; then
 
         echo "Pushing todo\`s.."
         cd "/mnt/c/develop/todo" || return
-        git add -u
+        git add --all
         git commit -m "pushed with daily script"
         git push
         echo "Push of todo\`s successfull."
@@ -93,7 +93,7 @@ elif [[ $system_info == *"Linux"* ]]; then
 
         echo "Pushing SublimeText"
         cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
-        git add -u
+        git add --all
         git commit -m "pushed with daily script"
         git push
 
@@ -122,7 +122,7 @@ elif [[ $system_info == *"Linux"* ]]; then
         do
             echo "Pushing $repo..."
             cd "/mnt/c/develop/$repo" || return
-            git add -u
+            git add --all
             git commit -m "pushed with daily script"
             git push
             echo -e "Push of $repo successfull. \n \n"
@@ -132,7 +132,7 @@ elif [[ $system_info == *"Linux"* ]]; then
 
         echo "Pushing SublimeText"
         cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
-        git add -u
+        git add --all
         git commit -m "pushed with daily script"
         git push
 
