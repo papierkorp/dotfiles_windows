@@ -56,7 +56,8 @@ if [[ $system_info == *"MINGW64"* ]]; then
     fi
 
     echo "Pulling SublimeText"
-    cd "C:/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
+    cd "C:/Users/Markus/OneDrive/Sublime/User" || return
+    # cd "C:/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
     git pull
 
     printf "===============\n\n\n\n\n==============="
@@ -105,7 +106,8 @@ elif [[ $system_info == *"Linux"* ]]; then
     fi
 
     echo "Pulling SublimeText"
-    cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
+    # cd "/mnt/c/Users/Markus/AppData/Roaming/Sublime Text/Packages/User" || return
+    cd "/mnt/c/Users/Markus/OneDrive/Sublime/User" || return
     git pull
 
     printf "===============\n\n\n\n\n==============="
