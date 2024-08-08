@@ -27,6 +27,9 @@
 [includeIf "gitdir:C:/Users/Markus/AppData/Roaming/Sublime Text/Packages/"]
     path = C:/Users/Markus/.gitconfig_privat
 
+[includeIf "gitdir:C:/Users/Markus/OneDrive/"]
+    path = C:/Users/Markus/.gitconfig_privat
+
 [includeIf "gitdir:C:/develop/todo/"]
     path = C:/Users/Markus/.gitconfig_workgithub
 
@@ -68,6 +71,10 @@
 [includeIf "gitdir:%(prefix)//mnt/c/Users/Markus/"]
     path = ~/.gitconfig_privat
 
+[includeIf "gitdir:%(prefix)//~/OneDrive/"]
+    path = ~/.gitconfig_privat
+
+
 #---------------------------------------------------------------
 #-------------------------- Debugging --------------------------
 #---------------------------------------------------------------
@@ -75,6 +82,7 @@
 #git config -l --show-scope --show-origin
 #git config user.email
 #git config core.sshcommand
+#sicherstellen dass immer ein / ganz hinten vom pfad ist..
 #~/.gitconfig
 #git remote set-url origin git@<repository.domain.com>:<username>/<repo_name>.git
 [credential "https://git.sirconic-group.de"]
