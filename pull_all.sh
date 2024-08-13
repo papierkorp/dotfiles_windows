@@ -1,7 +1,7 @@
 #!/bin/bash
 
 repos_work=("infrastructure" "leasone" "wiki")
-repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow" "vikunja" "gowiki")
+repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow" "vikunja" "gowiki" "godot/beastmaster" "godot/infiniteluckyelements")
 system_info=$(uname -a)
 hostname=$(hostname | tr '[:lower:]' '[:upper:]')
 hostname_to_check=$(echo "PAPIERKORP" | tr '[:lower:]' '[:upper:]')
@@ -16,7 +16,7 @@ if [[ $system_info == *"MINGW64"* ]]; then
 
     printf "===============\n\n\n\n\n==============="
 
-    if [[ $hostname  != $hostname_to_check ]]; then
+    if [[ $hostname  != "$hostname_to_check" ]]; then
         for repo in "${repos_work[@]}"
         do
             echo "Pulling Ops - $repo..."
@@ -44,7 +44,7 @@ if [[ $system_info == *"MINGW64"* ]]; then
     fi
 
 
-    if [[ $hostname  == $hostname_to_check ]]; then
+    if [[ $hostname  == "$hostname_to_check" ]]; then
         for repo in "${repos_privat[@]}"
         do
             echo "Pulling Private - $repo..."
@@ -68,7 +68,7 @@ elif [[ $system_info == *"Linux"* ]]; then
 
     printf "===============\n\n\n\n\n==============="
 
-    if [[ $hostname  != $hostname_to_check ]]; then
+    if [[ $hostname  != "$hostname_to_check" ]]; then
         for repo in "${repos_work[@]}"
         do
             echo "Pulling $repo..."
@@ -94,7 +94,7 @@ elif [[ $system_info == *"Linux"* ]]; then
     printf "===============\n\n\n\n\n==============="
     fi
 
-    if [[ $hostname  == $hostname_to_check ]]; then
+    if [[ $hostname  == "$hostname_to_check" ]]; then
         for repo in "${repos_privat[@]}"
         do
             echo "Pulling $repo..."
