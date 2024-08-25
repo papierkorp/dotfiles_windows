@@ -1,7 +1,7 @@
 #!/bin/bash
 
 system_info=$(uname -a)
-repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow" "vikunja" "gowiki" "godot/beastmaster" "godot/infiniteluckyelements")
+repos_privat=("cheatsheet" "lanparty" "blog" "THM" "horizon-flow" "vikunja" "gowiki" "godot/beastmaster" "godot/infiniteluckyelements" "test")
 
 hostname=$(hostname | tr '[:lower:]' '[:upper:]')
 hostname_to_check=$(echo "PAPIERKORP" | tr '[:lower:]' '[:upper:]')
