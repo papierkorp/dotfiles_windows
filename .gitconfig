@@ -2,6 +2,7 @@
   excludesfile = ~/.gitignore
 	autocrlf = false
   eol = lf
+	fileMode = false
 
 [status]
   showUntrackedFiles = no
