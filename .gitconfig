@@ -88,3 +88,9 @@
 #git remote set-url origin git@<repository.domain.com>:<username>/<repo_name>.git
 [credential "https://git.sirconic-group.de"]
 	provider = generic
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
