@@ -1,7 +1,7 @@
 #!/bin/bash
 
 repos_work=("infrastructure" "leasone" "wiki")
-repos_privat=("lanparty" "blog" "horizon-flow" "pewito" "godot/beastmaster" "godot/infiniteluckyelements" "godot/test" "projects" "test" "card-generator")
+repos_privat=("lanparty" "blog" "horizon-flow" "knovault" "godot/beastmaster" "godot/infiniteluckyelements" "godot/test" "projects" "test" "card-generator")
 system_info=$(uname -a)
 hostname=$(hostname | tr '[:lower:]' '[:upper:]')
 hostname_to_check=$(echo "PAPIERKORP" | tr '[:lower:]' '[:upper:]')
