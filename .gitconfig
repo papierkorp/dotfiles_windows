@@ -1,8 +1,15 @@
+# https://rogerdudler.github.io/git-guide/
 [core]
   excludesfile = ~/.gitignore
 	autocrlf = false
   eol = lf
 	fileMode = false
+
+[color]
+    ui = true
+
+[format]
+    pretty = oneline
 
 [status]
   showUntrackedFiles = no
